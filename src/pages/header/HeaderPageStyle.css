@@ -6,10 +6,25 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url("../../pictures/banner.jpeg") 
-    no-repeat center center;
+    background: url("../../pictures/banner.jpeg") no-repeat center center;
     background-size: cover;
     background-position: center;  
+    position: relative;
+}
+
+.header-style > * {
+    z-index: 10;
+}
+
+
+.header-style::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .profile-img {
@@ -30,34 +45,3 @@
 .subtext {
     margin-top: 8px;
 }
-
-.main {
-    background-color: yellow;
-    height: 100px;
-    margin-top: 32px;
-    display: flex;
-    justify-content: center;
-}
-
-.main-container {
-    max-width: 750px;
-    min-width: 600px;
-    width: 100%;
-    padding-left: 16px;
-    padding-right: 16px;
-}
-
- 
-
-
-.footer {
-    min-height: 100px;
-    background-color: #eaecee70;
-    color: #929eaa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-    font-size: 14px;
-
-} 

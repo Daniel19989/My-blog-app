@@ -17,19 +17,6 @@ const Headerpage = () => {
                     Welcome to my blog!
                 </div>
             </header>
-
-            <div className='main'>
-                <div className='main-container'>
-                    <div className='post'>
-
-                    </div>
-                </div>
-
-            </div>
-
-            <footer className='footer'>
-                <p>Made with ❤ Daniel Ristevski</p>
-            </footer>
         </>
     )
 }
