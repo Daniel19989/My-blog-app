@@ -1,28 +1,8 @@
 import React from 'react'
 import './Body.css'
-const axios = require('axios');
-const { useState, useEffect } = require('react');
-
 
 
 const Body = ({ post_date, post_title, post_text, post_content, post_image }) => {
-
-    const [post, setPosts] = useState([]);
-
-    useEffect(() => {
-        axios
-            .get('http://localhost:4000/api/posts')
-            .then(res => {
-                console.log(res)
-                setPosts(res.data)
-            })
-            .catch(
-                err => {
-                    console.log(err)
-
-                })
-
-    }, [])
 
 
     return (

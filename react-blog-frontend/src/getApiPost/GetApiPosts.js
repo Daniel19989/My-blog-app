@@ -1,15 +1,13 @@
 import React from 'react'
 import Body from '../components/body/Body';
-const { useState, useEffect } = require('react');
-const axios = require('axios');
-
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const GetApiPosts = () => {
     const [post, setPosts] = useState([]);
 
     useEffect(() => {
-        axios
-            .get('http://localhost:4000/api/posts')
+        axios.get('http://localhost:4000/api/posts')
             .then(res => {
                 console.log(res)
                 setPosts(res.data)
@@ -17,9 +15,7 @@ const GetApiPosts = () => {
             .catch(
                 err => {
                     console.log(err)
-
                 })
-
     }, [])
 
     return (
@@ -32,9 +28,7 @@ const GetApiPosts = () => {
                     post_image={post.post_image}
                 />
             ))}
-
         </div >
-
     )
 }
 
