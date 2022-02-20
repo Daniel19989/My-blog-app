@@ -22,6 +22,8 @@ const GetApiPosts = () => {
         <div>
             {post.map(post => (
                 <Body
+                    key={post.id}
+                    post_id={post.id}
                     post_date={new Date(parseInt(post.added_date)).toDateString()}
                     post_title={post.title}
                     post_text={post.content}
