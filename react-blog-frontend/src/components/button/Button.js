@@ -3,9 +3,10 @@ import "./Button.css"
 import { Link } from 'react-router-dom';
 
 const AddPostButton = () => {
+
     return (
-        <div className='add-post'>
-            <Link to='/Post'>
+        <div >
+            <Link to={"/NewPost"}>
                 <div className='nav-button new-post-button'>+</div>
             </Link>
         </div>

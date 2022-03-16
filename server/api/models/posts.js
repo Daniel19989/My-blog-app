@@ -3,6 +3,12 @@ const fs = require('fs');
 
 class post {
 
+    add(newPost) {
+        const data = this.readData();
+        data.unshift(newPost);
+        this.storeData(data);
+    }
+
     get() {
         return this.readData();
     }
@@ -29,8 +35,6 @@ class post {
         let data = JSON.stringify(rawData);
         fs.writeFileSync(PATH, data);
     }
-
 }
-
 
 module.exports = post;
